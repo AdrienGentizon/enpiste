@@ -3,9 +3,7 @@ export function logOperation(operationName: string) {
 }
 
 export function logError(operationName: string, error: unknown) {
-  console.error(
-    '[Error]',
-    operationName,
-    (error as Error)?.message ?? 'unknown error'
-  )
+  const errorMessage = `[Error] ${operationName} ${(error as Error)?.message ?? 'unknown error'}`
+  console.error(errorMessage)
+  return errorMessage
 }
