@@ -9,6 +9,7 @@ type Env = {
   NGROK_DOMAIN: string
 
   CLERK_WEBHOOK_SECRET: string
+  CLERK_SECRET_KEY: string
 }
 
 let env: Env | undefined = undefined
@@ -30,6 +31,7 @@ export default function getEnv(): Env {
       NGROK_AUTHTOKEN: getEnvVar('NGROK_AUTHTOKEN'),
       NGROK_DOMAIN: getEnvVar('NGROK_DOMAIN'),
       CLERK_WEBHOOK_SECRET: getEnvVar('CLERK_WEBHOOK_SECRET'),
+      CLERK_SECRET_KEY: getEnvVar('CLERK_SECRET_KEY'),
     }
   }
   return env
